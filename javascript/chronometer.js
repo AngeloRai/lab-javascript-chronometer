@@ -20,12 +20,9 @@ class Chronometer {
   }
 
   twoDigitsNumber(num) {
-    if (num < 10) {
-      return `0${num}`;
-    } else {
+    if (num < 10) return `0${num}`
       return `${num}`;
-    }
-  }
+500  }
  
   stopClick() {
     clearInterval(this.intervalId);
@@ -38,7 +35,6 @@ class Chronometer {
     let min = this.twoDigitsNumber(this.getMinutes())
     let sec = this.twoDigitsNumber(this.getSeconds())
     console.log(min, sec);
-    return `${min}:${sec}`
-    
+    splits.innerHTML = `${min}:${sec}`
   }
 }
